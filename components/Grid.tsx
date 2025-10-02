@@ -1,9 +1,9 @@
 import { gridItems } from "@/data";
 import dynamic from "next/dynamic";
 
-// Dynamically import BentoGrid with SSR disabled
-const BentoGrid = dynamic(() => import("./ui/BentoGrid").then((m) => m.BentoGrid), { ssr: false });
-import { BentoGridItem } from "./ui/BentoGrid";
+// Dynamically import BentoGrid and BentoGridItem with SSR disabled
+const BentoGrid = dynamic(() => import("./ui/BentoGrid").then(m => m.BentoGrid), { ssr: false });
+const BentoGridItem = dynamic(() => import("./ui/BentoGrid").then(m => m.BentoGridItem), { ssr: false });
 
 const Grid = () => {
   return (
